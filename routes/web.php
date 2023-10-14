@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\PostController;
+use App\Http\Controllers\ArticaleController;
 use App\Models\articales;
 use App\Models\User;
 use Illuminate\Database\DBAL\TimestampType;
@@ -21,17 +21,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/posts', [PostController::class, 'index']);
-Route::get('/posts/{id}', [PostController::class, 'show']);
-
-Route::get('/users', function () {
-
-    return User::create(
-        [
-            'name' => 'dfsdfsdf',
-            'email' => 'oooooooo',
-            'password' => bcrypt('dsfsf'),
-           
-            ]
-    );
-});
+Route::get('/articales', [ArticaleController::class, 'index']);
+Route::get('/articale/{id}', [ArticaleController::class, 'show']);

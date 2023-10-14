@@ -4,10 +4,11 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Faker\Factory as Faker;
-class PostController extends Controller
+class ArticaleController extends Controller
 {
     
-  public function index(){
+  public function index()
+  {
 
    $faker = Faker::create();
    $posts= [];
@@ -23,7 +24,8 @@ class PostController extends Controller
    return response()->json($posts);
    
   }
-  public function show($id){
+  public function show($id)
+  {
 
     $faker = Faker::create();
     $posts= [];

@@ -12,11 +12,12 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('articales', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
             $table->string('title');
             $table->text('body');
-            $table->timestamp('createdddd_at');
-            $table->timestamp('updated_at');
+            $table->timestamp('created_at')->nullable();
+            $table->timestamp('updated_at')->nullable();
+      
 
         });
     }
